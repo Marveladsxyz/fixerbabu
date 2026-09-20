@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LANDING PAGE</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+overflow:hidden;
+background:linear-gradient(135deg,#030712,#081a3a,#0b4ea2,#0b1b35);
+background-size:400% 400%;
+animation:bgMove 12s ease infinite;
+position:relative;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+body::before{
+content:"";
+position:absolute;
+width:420px;
+height:420px;
+background:#00bfff;
+border-radius:50%;
+filter:blur(180px);
+top:-180px;
+left:-150px;
+opacity:.35;
+animation:float1 8s ease-in-out infinite;
+}
+
+body::after{
+content:"";
+position:absolute;
+width:380px;
+height:380px;
+background:#0066ff;
+border-radius:50%;
+filter:blur(180px);
+bottom:-150px;
+right:-120px;
+opacity:.35;
+animation:float2 10s ease-in-out infinite;
+}
+
+@keyframes float1{
+50%{transform:translateY(40px);}
+}
+
+@keyframes float2{
+50%{transform:translateY(-40px);}
+}
+
+.card{
+position:relative;
+z-index:2;
+width:92%;
+max-width:390px;
+padding:35px 28px;
+border-radius:32px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(35px);
+border:1px solid rgba(255,255,255,.18);
+box-shadow:
+0 30px 70px rgba(0,0,0,.55),
+0 0 40px rgba(0,153,255,.25);
+text-align:center;
+color:#fff;
+animation:card .8s ease;
+overflow:hidden;
+}
+
+.card::before{
+content:"";
+position:absolute;
+top:0;
+left:-120%;
+width:60%;
+height:100%;
+background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);
+transform:skewX(-25deg);
+animation:shine 4s infinite;
+}
+
+@keyframes shine{
+100%{
+left:180%;
+}
+}
+
+@keyframes card{
+from{
+opacity:0;
+transform:translateY(35px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.tag{
+display:inline-block;
+padding:9px 22px;
+border-radius:50px;
+background:rgba(0,150,255,.18);
+border:1px solid rgba(0,180,255,.45);
+color:#8de5ff;
+font-size:13px;
+font-weight:700;
+letter-spacing:.5px;
+margin-bottom:22px;
+}
+
+.profile{
+width:105px;
+height:105px;
+border-radius:50%;
+object-fit:cover;
+display:block;
+margin:auto;
+border:4px solid #27b6ff;
+box-shadow:
+0 0 20px #00bfff,
+0 0 40px rgba(0,180,255,.6);
+transition:.4s;
+}
+
+.profile:hover{
+transform:scale(1.08) rotate(3deg);
+}
+
+.name{
+margin-top:18px;
+font-size:31px;
+font-weight:900;
+background:linear-gradient(90deg,#ffffff,#8be9ff,#0099ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+letter-spacing:1px;
+}
+
+.sub{
+margin-top:12px;
+font-size:14px;
+line-height:1.8;
+opacity:.88;
+color:#dbeeff;
+}
+
+.timer{
+margin:26px 0;
+padding:15px;
+border-radius:18px;
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.12);
+font-size:17px;
+font-weight:700;
+color:#8ce6ff;
+box-shadow:0 0 20px rgba(0,170,255,.18);
+}
+
+.btn{
+width:100%;
+padding:17px;
+border:none;
+border-radius:60px;
+background:linear-gradient(135deg,#00c6ff,#0066ff);
+font-size:18px;
+font-weight:800;
+color:#fff;
+cursor:pointer;
+transition:.35s;
+box-shadow:
+0 15px 35px rgba(0,102,255,.45);
+}
+
+.btn:hover{
+transform:translateY(-4px) scale(1.02);
+background:linear-gradient(135deg,#31d6ff,#0055ff);
+box-shadow:
+0 25px 55px rgba(0,102,255,.65);
+}
+
+.footer{
+margin-top:22px;
+font-size:12px;
+line-height:1.7;
+color:#c8dfff;
+opacity:.9;
+}
+
+@media(max-width:400px){
+
+.card{
+padding:28px 20px;
+}
+
+.name{
+font-size:26px;
+}
+
+.btn{
+padding:15px;
+font-size:17px;
+}
+
+.profile{
+width:95px;
+height:95px;
+}
+
+}
+</style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1762121078269880');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1762121078269880&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="tag">
+🏏 Cricket Updates & Insights
+</div>
+
+<img src="FIXER.jpg" class="profile" alt="Profile">
+
+<div class="name">
+FIXER BABU
+</div>
+
+<div class="sub">
+Honest analysis • Match insights • Community driven
+</div>
+
+<div class="timer">
+⏳ FREE JOINING ENDS IN
+<span id="count">60</span>s
+</div>
+
+<button class="btn" onclick="join()">
+🚀 Subscribe Free Telegram
+</button>
+
+<div class="footer">
+Stay informed with transparent cricket analysis.
+Join thousands of cricket fans today.
+</div>
+
+</div>
+
+<script>
+let time=60;
+const counter=document.getElementById("count");
+
+const timer=setInterval(()=>{
+if(time>0){
+time--;
+counter.innerHTML=time;
+}else{
+clearInterval(timer);
+counter.innerHTML="0";
+}
+},1000);
+
+function join(){
+window.location.href="https://t.me/+c8A-1H2Vd4gzMzdl";
+}
+</script>
+
+</body>
+</html>
